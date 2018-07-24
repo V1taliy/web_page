@@ -1,3 +1,17 @@
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+         url('../fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  }
+
 .clearfix::after {
     content: "";
     clear: both;
@@ -9,6 +23,7 @@
     flex-wrap: wrap;
     height: 110px;
     align-items: center;
+    justify-content: space-around;
     
 }
 .flexItem {
@@ -19,7 +34,9 @@
     
 }
 .flexEnd {
-    justify-content: flex-end;
+    justify-content: space-around;
+    padding-right: 50px; 
+     
    
 }
 .blueBackground {
@@ -66,7 +83,7 @@ padding-top: 80px;
             pre.dates {
                     text-align: center;
                     font-size: 14px; 
-                    margin-top: 1px;
+                    margin-top: -40px;
                     }
                     button {
                         height: 50px;
@@ -74,11 +91,27 @@ padding-top: 80px;
                         margin-bottom: -101px;
                     }
                     .selected {
-                        background: #03a9f4;
+                        
                         margin-right: 20px;
                     }
+                    .two_buttons {
+                        display: flex;
+                        padding-top: 100px;
+                       justify-content: center;
+                       padding-left: 50px; 
+                    }
+                    .two_buttons a {
+                        border: 1px solid white;
+                        color: white;
+                        padding: 20px;
+                        margin: 20px;
+                        text-decoration: none;
+                        }
+                        .two_buttons a:hover {
+                           background: #03a9f4;
+                            }
 .about-our-project {
-height: 640px;
+
 
 }
 .about-us {
@@ -115,15 +148,15 @@ align-items: center;
 .center-circle {
     text-align: center;
 }
-.see-our-project {
-    height: 600px;
+/*.see-our-project {
+    /*height: 600px;
     background-size: cover;
-    background-image: url("img/Rectangle1.png");
+    /*background-image: url("img/Rectangle1.png");
     background-repeat: no-repeat;
     margin-left: 50px;
     margin-right: 50px;
     padding-top: 350px;
-}
+}*/
 .play-icon {
     text-align: center; 
     color: white;
@@ -145,7 +178,7 @@ text-align: center;}
 margin-top: 30px;}
 
 .our-members {
-    height: 750px;
+    /*height: 750px;*/
     width: 100%;
     background: #343131;
 }
@@ -267,6 +300,7 @@ padding-top: 60px;
     .our-blog {
         height: 750px;
         background: white;
+        text-align: center;
     }
     .selected2  {display: inline-block;
         margin-left: 585px; }
@@ -359,7 +393,7 @@ left: 0;
                 margin-bottom: 15px;
                 padding: 15px;}
            
-                .map {
+               /* .map {
                     height: 500px;
                     background: url("img/map.png");
                     background-size: cover;
@@ -368,7 +402,8 @@ left: 0;
                 .map img {
                     padding-top: 250px; 
                     padding-left: 300px;
-                }
+                }*/
+                
                 footer {
                     height: 400px;
                     background: #333333;
@@ -433,9 +468,8 @@ margin-right: 100px;
 padding-top: 15px;
 
         }
-        .flexEnd li:nth-child(1){
-            height: 30px;
-            width: 75px;
+        .flexEnd li:hover{
+           
             background: #03a9f4;
         }
 
@@ -446,8 +480,85 @@ padding-top: 15px;
         @media screen and (max-width: 1367px){
             .second {line-height: 0.3;}  
         }
+        @media screen and (max-width: 1150px){
+            .mem {
+                flex-wrap: wrap;
+                
+            } 
+        }
+
+        @media screen and (max-width: 1032px){
+            .nav.flexContainer.flexEnd {
+               height: 0;
+               padding-right: 5px;
+               margin-top: 0;
+               align-items: flex-start; 
+            }    
+         }
+         @media screen and (max-width: 1032px){
+            .nav.flexItem.flexStart {
+               margin-bottom: 0;
+               align-items: flex-start; 
+            }    
+         }
+         @media screen and (max-width: 1032px){
+            .flexContainer {
+               
+               align-items: flex-start; 
+            }    
+         }
+         @media screen and (max-width: 1100px){
+            .book-img{
+               display: none;
+            }    
+            .seat #subject {width: 385px;}
+            .seat textarea {width: 385px;}
+         }
 
         @media screen and (max-width: 1000px){
-           
-            
+            .u-project h1{font-size: 35px;
+             }    
+             .u-project h2{font-size: 30px;
+                
+            }
+            .u-project pre {font-size: 30px;
+                
+            }
+            .u-project pre.dates {font-size: 14px;
+                margin-top: 0; }
+              
         }
+        @media screen and (max-width: 1100px){
+            .olo button{
+               display: none;
+            }    
+         }
+         @media screen and (max-width: 1100px){
+            .olo img{
+               display: none;
+            }    
+         }
+         @media screen and (max-width: 1368px){
+            footer .column1 { line-height: 1;
+                margin-right: 10px;    
+         }
+         footer .column1.second { line-height: 1;
+            margin-right: 10px;}
+
+            footer .column1.first { line-height: 1;
+                margin-right: 10px;    
+     }
+        }
+        @media screen and (max-width: 1000px){
+            footer { padding: 10px;  
+                height: 230px;   
+         } 
+        }
+
+        @media screen and (max-width: 630px){
+            footer { padding: 10px;  
+                height: 320px;   
+         }
+        }
+
+       
